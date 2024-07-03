@@ -43,7 +43,7 @@ with mp_hands.Hands(
       continue
     for hand_world_landmarks in results.multi_hand_world_landmarks:
       mp_drawing.plot_landmarks(
-        hand_world_landmarks, mp_hands.HAND_CONNECTIONS, azimuth=5)
+        hand_world_landmarks, mp_hands.HAND_CONNECTIONS, azimuth=6)
 
 # For webcam input:
 cap = cv2.VideoCapture(0)
