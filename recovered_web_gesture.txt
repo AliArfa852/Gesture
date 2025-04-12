@@ -6,7 +6,7 @@ import ssd1306
 
 # Configuration for your WiFi network
 SSID = 'Otaku4205'
-PASSWORD = 'Atoz1to9'
+PASSWORD = 'atoz1to9'
 
 # Setup the WiFi connection
 wlan = network.WLAN(network.STA_IF)
@@ -196,9 +196,6 @@ while True:
             elif 'GET /face?type=' in request:
                 face_type = request.split('type=')[1].split(' ')[0]
                 display_face(face_type)
-        response = html
-        cl.send('HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n')
-        cl.send(response)
         cl.close()
     except Exception as e:
         print('Error:', e)
